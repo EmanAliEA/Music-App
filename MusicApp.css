@@ -1,0 +1,220 @@
+ 
+body{
+    background-color: rgb(23 8 37);
+}
+#Player {
+    width: 370px;
+    height: 546px;
+    background-color: rgb(76 10 90 / 51%);
+    display: inline-block;
+    box-shadow: 3px 3px 13px #439ee1, 
+    -3px -3px 13px #d909a1;
+    border-radius: 14px;
+}
+#Player{
+    margin: 70px 0 -42px 561px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .music-list{
+    width: 320px;
+    margin: 0 0 -79px 20px;
+    position: relative;
+    visibility: hidden;
+} */
+img{
+    width: 35px;
+    height: 35px;
+    margin: 0 0 -108px 0;
+    /* display: inline-block; */
+}
+#toList{
+    width: 35px;
+    height: 35px;
+    margin: 0px 0 -50px 24px;
+}
+#list{
+    margin: 0px -156px -50px 194px;
+}
+.picMusic{
+    border-top-left-radius: 65px;
+    border-bottom-right-radius: 65px;
+    width: 190px;
+    height: 190px;
+    background-color: white;
+    margin: 72px 0 0 91px;
+    box-shadow: 3px 3px 9px #439ee1, 
+    -3px -3px 7px #d909a1;
+    overflow: hidden;
+}
+#pic{
+    width: 100%;
+    height: 100%;
+    /* margin: 68px 0 0px 15px; */
+    /* background-size: cover; */
+    object-fit: cover;
+}
+#song_details{
+    text-align: center;
+    margin: 39px 0 43px 0;
+    color: #7fbce8;
+    line-height: 25px;
+}
+#song_details #name{
+    font-size: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#song_details #artist{
+    font-size: 18px;
+    opacity: 0.9;
+}
+#prograss_area{
+    height: 6px;
+    width: 86%;
+    background: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 22px 9px
+}
+#prograss_bar{
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    position: relative;
+    background: linear-gradient(90deg ,rgb(43 147 208)5%, rgb(206 56 161) 74%)
+}
+#prograss_bar::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: black;
+    border-radius:inherit ;
+    top: 50%;
+    transform:translateY(-50%);
+    right: -5px;
+    background: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#prograss_area:hover #prograss_bar::before{
+    opacity: 1;  
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px -2px 0 2px;
+    color: rgb(228, 220, 220);
+    font-size: 13px;
+    text-shadow: 1px 0px 2px #e27dd2;
+}
+.controls{
+    display: flex;
+    margin: 68px 31px 0 28px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.controls .repeat{
+    width: 21px;
+    height: 21px;
+    margin: 7px 0 0 3px;
+}
+.controls #playlist{
+    width: 26px;
+    height: 23px;
+    margin: 5px 0 0 -4px
+}
+#music-list{
+    position: absolute;
+    left: 0;
+    bottom: -55%;
+    opacity: 0;
+    /* pointer-events: none; */
+    border-radius: 15px;
+    background: rgb(121, 22, 174);
+    box-shadow: 0 -5 10 rgb(0, 0, 0,0.1);
+    width: 100%;
+    transition: all 0.14s ease-out;
+}
+#music-list.show{
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+#music-list .header .row , #music-list li{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 19px;
+    margin: 13px 17px 0 -18px; 
+    color: #ffffff;
+    
+}
+#music-list .header .row{
+    margin: 13px 16px 0 10px;
+    /* cursor: pointer; */
+}
+/* .music-list .header .row input[type='file']{
+    visibility: hidden;
+} */
+#music-list .row img{
+    width: 26px;
+    height: 26px;
+}
+#music-list .header .row #playlist{
+    width: 30px;
+    height: 22px;
+    margin-left: 2px;
+    margin-right: -15px;
+}
+#music-list .header .row span{
+    margin-left: -116px;
+}
+#music-list .header .row .cancel{
+    margin: 0 0 0px -109px;
+}
+.header .row i{
+    cursor: default;
+}
+#music-list ul{
+    margin: 10px 0;
+    max-height: 260px;
+    overflow-y: auto;
+}
+#music-list ul::-webkit-scrollbar{
+    width:0px;
+}
+#music-list ul li{
+    cursor: pointer;
+    list-style:none;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#music-list ul li:hover{
+    border: 1px solid #3c1e68;
+    background-color: #9187de;
+    color: #000000fc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 4px 8px #1a091f;
+}
+#music-list ul li:last-child{
+    border-bottom: 0px;
+}
+#music-list ul li .row span{
+    font-size: 17px;
+}
+ul li .row  p{
+    opacity: 0.6;
+}
+ul li .audio-duration{
+    font-size: 16px;
+}
+.addMusic:hover  ,.cancel:hover{
+    cursor: pointer;
+}

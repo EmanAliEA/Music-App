@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MusicApp</title>
+        <link rel="stylesheet" href="MusicApp.css">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/repeat.css' rel='stylesheet'>
+        <script src="music-list.js"></script>
+        <script src="music.js"></script>
+    </head>
+    </head>
+    <body>
+        <div id="Player"> 
+            <div id="toolbar">
+                <img src="Images/back-button(1).png" alt="" id="toList">
+                <!-- <img src="Images/list.png" alt="" id="list"> -->
+            </div>
+            <div class="picMusic">
+                <img src="Images/OIP.jpg" alt="" id="pic">
+            </div>
+            <div id="song_details">
+                <p id="name">SongTitle</p>
+            </div>
+            <div id="prograss_area">
+                <div id="prograss_bar">
+                </div>
+                <div class="timer">
+                    <span class="current_time">0:00</span>
+                    <span class="max_time">3:00</span>
+                </div>
+                <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="controls">
+                <img src="Images/repeat1.png" alt="" class="repeat" title="playlist looped" onclick="Repeat()">
+                <img src="Images/before-button .png" alt="" id="back" onclick="backAudio()">
+                <img src="Images/play-button (2).png" alt="" id="play" onclick="playPause()">
+                <img src="Images/next-button.png" alt="" id="next" onclick="nextAudio()">
+                <img src="Images/playlist (1).png" alt="" id="playlist" onclick="OpenList()">
+            </div>
+            <div id="music-list">
+                <div class="header">
+                      <div class="row">
+                        <img src="Images/music (2).png" alt="" class="playlist" >
+                        <span>Music list</span>
+                        <!-- <form action="#">
+                        </form> -->
+                        <input type="file" id="file1" multiple class="file-input" hidden> 
+                        <!-- <button onclick="addMusic()">add Music</button> -->
+                        <img src="Images/music.png" alt="" id="addMusic" onclick="addMusic()" >
+                        <img src="Images/cancel.png" alt="" class="cancel" onclick="cancel()">
+                      </div>
+                </div>
+                <ul>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>
